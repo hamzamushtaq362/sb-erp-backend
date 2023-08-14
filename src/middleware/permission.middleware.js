@@ -12,6 +12,20 @@ const checkPermissions = expressJwtPermissions({
   },
 });
 
+// const checkPermissions = (requiredRoles) => {
+//   return (req, res, next) => {
+//     const userRoles = req.user.roles;
+
+//     const hasRequiredRole = requiredRoles.some((requiredRole) => userRoles.includes(requiredRole));
+
+//     if (!hasRequiredRole) {
+//       return res.status(403).json({ error: 'Access forbidden. You need admin or employee role.' });
+//     }
+
+//     next();
+//   };
+// };
+
 module.exports = {
   checkPermissions,
 };

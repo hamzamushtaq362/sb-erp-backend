@@ -30,6 +30,10 @@ const Customer = sequelize.define("customer", {
         type:DataTypes.STRING,
         allowNull:false
     },
+    floorLevels:{
+      type:DataTypes.INTEGER,
+      allowNull:false
+  },
     city:{
         type:DataTypes.STRING,
         allowNull:false
@@ -42,6 +46,10 @@ const Customer = sequelize.define("customer", {
         type:DataTypes.STRING,
         allowNull:false
     },
+    basement:{
+      type:DataTypes.BOOLEAN,
+      allowNull:true
+  },
 })
 
 // Customer.sync().then(() => {
